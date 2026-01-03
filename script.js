@@ -848,7 +848,7 @@ function init() {
     });
 
     // Load first lesson by default
-    loadLesson('1');
+    loadLesson('all');
 }
 
 // Load words based on selection
