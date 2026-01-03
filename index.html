@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Vocab Master</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>🇯🇵 Nihongo Master</h1>
+            <select id="lesson-select">
+                <option value="all">All Lessons</option>
+                <!-- Options will be filled by JavaScript -->
+            </select>
+        </header>
+
+        <div class="card-area">
+            <div class="card" id="flashcard" onclick="flipCard()">
+                <div class="card-inner">
+                    <!-- Front of Card (English) -->
+                    <div class="card-front">
+                        <h2 id="word-english">Select a Lesson</h2>
+                        <p class="hint">Click to Flip</p>
+                    </div>
+                    <!-- Back of Card (Japanese) -->
+                    <div class="card-back">
+                        <h2 id="word-kanji"></h2>
+                        <h3 id="word-kana"></h3>
+                        <!-- Add this button below the Kana -->
+                        <button id="replay-btn" onclick="playAudio(event)"
+                            style="margin-top:15px; background:transparent; border:1px solid white;">🔊</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button onclick="prevCard()">← Prev</button>
+            <span id="counter">0 / 0</span>
+            <button onclick="nextCard()">Next →</button>
+        </div>
+
+        <button class="shuffle-btn" onclick="shuffleCards()">🔀 Shuffle Words</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

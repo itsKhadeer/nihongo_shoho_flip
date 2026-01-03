@@ -1,0 +1,164 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212; /* Very dark gray background */
+    color: #e0e0e0; /* Light gray text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h1 {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Darker Dropdown */
+select {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    background-color: #2c2c2c;
+    color: #ffffff;
+    border: 1px solid #444;
+    width: 100%;
+    margin-bottom: 25px;
+    outline: none;
+}
+
+/* THE FLASHCARD 3D EFFECT */
+.card-area {
+    perspective: 1000px;
+    height: 350px; /* Made it slightly taller */
+    cursor: pointer;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5); /* Stronger shadow for depth */
+    border-radius: 20px;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+/* Front of Card (Dark Grey) */
+.card-front {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: 1px solid #333;
+}
+
+/* Back of Card (Deep Red/Pink) */
+.card-back {
+    background-color: #d63031; /* Slightly darker red for better eye comfort */
+    color: white;
+    transform: rotateY(180deg);
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+}
+
+#word-english { 
+    font-size: 2rem; 
+    padding: 20px; 
+    font-weight: bold;
+    color: #4ecdc4; /* Teal color for English word */
+}
+
+.hint {
+    color: #888;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+#word-kanji { 
+    font-size: 3.5rem; 
+    margin: 0; 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+#word-kana { 
+    font-size: 1.8rem; 
+    font-weight: normal; 
+    margin-top: 15px;
+    color: #ffeaa7; /* Soft yellow for Kana */
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#counter {
+    color: #888;
+    font-family: monospace;
+    font-size: 1.1rem;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #2c2c2c;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background-color: #383838;
+    border-color: #666;
+}
+
+button:active { 
+    transform: scale(0.96); 
+}
+
+.shuffle-btn {
+    margin-top: 20px;
+    background-color: #0984e3; /* Nice blue for shuffle */
+    border: none;
+    font-weight: bold;
+    width: 100%;
+}
+
+.shuffle-btn:hover {
+    background-color: #74b9ff;
+    color: #000;
+}
