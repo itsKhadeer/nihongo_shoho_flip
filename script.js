@@ -1,6 +1,3 @@
-// 1. PASTE THE JSON DATA HERE
-// (I am putting a small sample here, but you should replace this const 
-// with the FULL JSON I generated for you in the previous turn)
 const vocabData = {
   "lessons": [
     {
@@ -826,105 +823,160 @@ const vocabData = {
     }
   ]
 };
-// --- APP LOGIC BELOW ---
+// ... [KEEP YOUR HUGE vocabData JSON HERE] ...
+
+// --- APP LOGIC ---
 
 let currentLessonWords = [];
+let displayList = []; // The list currently being shown (filtered or full)
 let currentIndex = 0;
+
+// Load weak words from LocalStorage (Memory)
+// We store them as a Set of strings like "Lesson1-WordIndex" or "Kana-English"
+let weakWordsSet = new Set(JSON.parse(localStorage.getItem('nihongoWeakWords')) || []);
+
 const cardElement = document.getElementById('flashcard');
 const englishEl = document.getElementById('word-english');
 const kanjiEl = document.getElementById('word-kanji');
 const kanaEl = document.getElementById('word-kana');
 const counterEl = document.getElementById('counter');
 const lessonSelect = document.getElementById('lesson-select');
+const weakToggle = document.getElementById('weak-toggle');
+const starBtn = document.querySelector('.star-btn');
 
-// Initialize the app
 function init() {
-    // Populate dropdown
     vocabData.lessons.forEach(lesson => {
         const option = document.createElement('option');
         option.value = lesson.lesson_number;
         option.textContent = `Lesson ${lesson.lesson_number}`;
         lessonSelect.appendChild(option);
     });
-
-    // Load first lesson by default
     loadLesson('all');
 }
 
-// Load words based on selection
-lessonSelect.addEventListener('change', (e) => {
-    loadLesson(e.target.value);
-});
+// 1. GENERATE A UNIQUE ID FOR EACH WORD
+// We need this to track which specific word is "weak"
+function getWordId(word) {
+    return `${word.kana}-${word.english}`;
+}
 
+// 2. LOAD LESSON (Called when changing dropdown OR toggling checkbox)
 function loadLesson(lessonNum) {
+    // A. Get the raw words from the JSON
     if (lessonNum === 'all') {
-        // Flatten all lessons into one array
         currentLessonWords = vocabData.lessons.flatMap(l => l.vocabulary);
     } else {
         const lesson = vocabData.lessons.find(l => l.lesson_number == lessonNum);
         currentLessonWords = lesson ? [...lesson.vocabulary] : [];
+    }
+
+    // B. Check if we need to filter for Weak Words
+    reloadCurrentLesson();
+}
+
+function reloadCurrentLesson() {
+    const isWeakMode = weakToggle.checked;
+
+    if (isWeakMode) {
+        // Filter: Keep only words whose ID is in the weakWordsSet
+        displayList = currentLessonWords.filter(word => weakWordsSet.has(getWordId(word)));
+    } else {
+        // No Filter: Show everything
+        displayList = [...currentLessonWords];
     }
     
     currentIndex = 0;
     updateCard();
 }
 
+// 3. UPDATE CARD DISPLAY
 function updateCard() {
-    // Reset flip state
     cardElement.classList.remove('flipped');
     
-    // Safety check
-    if (currentLessonWords.length === 0) return;
+    // Handle Empty List
+    if (displayList.length === 0) {
+        englishEl.textContent = "No words found!";
+        kanjiEl.textContent = "";
+        kanaEl.textContent = "";
+        counterEl.textContent = "0 / 0";
+        starBtn.style.display = 'none'; // Hide star if no cards
+        return;
+    }
 
-    const word = currentLessonWords[currentIndex];
+    starBtn.style.display = 'block';
+    const word = displayList[currentIndex];
 
-    // Wait 200ms for flip animation to reset before changing text
     setTimeout(() => {
         englishEl.textContent = word.english;
-        kanjiEl.textContent = word.kanji ? word.kanji : word.kana; // Show Kana if no Kanji
-        kanaEl.textContent = word.kanji ? word.kana : ""; // Show Kana below if Kanji exists
-        counterEl.textContent = `${currentIndex + 1} / ${currentLessonWords.length}`;
+        kanjiEl.textContent = word.kanji ? word.kanji : word.kana;
+        kanaEl.textContent = word.kanji ? word.kana : "";
+        counterEl.textContent = `${currentIndex + 1} / ${displayList.length}`;
+        
+        // Update Star Appearance
+        updateStarAppearance(word);
     }, 200);
 }
 
-// Interaction Functions
+// 4. WEAK WORD LOGIC
+function updateStarAppearance(word) {
+    const id = getWordId(word);
+    if (weakWordsSet.has(id)) {
+        starBtn.textContent = '★'; // Solid star
+        starBtn.classList.add('active');
+    } else {
+        starBtn.textContent = '☆'; // Hollow star
+        starBtn.classList.remove('active');
+    }
+}
+
+function toggleWeakStatus(event) {
+    event.stopPropagation(); // Stop card from flipping
+
+    if (displayList.length === 0) return;
+
+    const word = displayList[currentIndex];
+    const id = getWordId(word);
+
+    if (weakWordsSet.has(id)) {
+        weakWordsSet.delete(id); // Remove
+    } else {
+        weakWordsSet.add(id); // Add
+    }
+
+    // Save to browser memory
+    localStorage.setItem('nihongoWeakWords', JSON.stringify([...weakWordsSet]));
+    
+    // Update visual star
+    updateStarAppearance(word);
+}
+
+// --- STANDARD NAVIGATION FUNCTIONS ---
+
 function flipCard() {
     cardElement.classList.toggle('flipped');
-
-    // Check if the card is now showing the back (Japanese side)
     if (cardElement.classList.contains('flipped')) {
-        const word = currentLessonWords[currentIndex];
-
-        // Use the Kana to ensure correct pronunciation
+        const word = displayList[currentIndex];
+        if(!word) return;
+        
+        // Audio Logic
         const textToSpeak = word.kana;
-
-        // Check if the browser supports speech
         if ('speechSynthesis' in window) {
             const utterance = new SpeechSynthesisUtterance(textToSpeak);
-            
-            utterance.lang = 'ja-JP'; // Set Language to Japanese
-            utterance.rate = 0.8;     // Speed: 1 is normal, 0.8 is slightly slower for learning
-            utterance.volume = 1;     // Volume: 0 to 1
-
-            // Cancel any audio currently playing (in case you click fast)
+            utterance.lang = 'ja-JP';
+            utterance.rate = 0.8;
             window.speechSynthesis.cancel();
-            
-            // Speak the word
             window.speechSynthesis.speak(utterance);
         }
     }
 }
 
-// Function to play audio without flipping
 function playAudio(event) {
-    // Stop the card from flipping when we click the speaker button
-    event.stopPropagation(); 
-
-    const word = currentLessonWords[currentIndex];
-    const textToSpeak = word.kana;
-
+    event.stopPropagation();
+    const word = displayList[currentIndex];
+    if(!word) return;
+    
     if ('speechSynthesis' in window) {
-        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        const utterance = new SpeechSynthesisUtterance(word.kana);
         utterance.lang = 'ja-JP';
         utterance.rate = 0.8;
         window.speechSynthesis.cancel();
@@ -933,11 +985,14 @@ function playAudio(event) {
 }
 
 function nextCard() {
-    if (currentIndex < currentLessonWords.length - 1) {
+    if (currentIndex < displayList.length - 1) {
         currentIndex++;
         updateCard();
     } else {
-        alert("End of Lesson! Good job.");
+        // Loop back to start? Or just stop.
+        // Let's loop for smoother usage
+        currentIndex = 0;
+        updateCard();
     }
 }
 
@@ -945,18 +1000,23 @@ function prevCard() {
     if (currentIndex > 0) {
         currentIndex--;
         updateCard();
+    } else {
+        currentIndex = displayList.length - 1;
+        updateCard();
     }
 }
 
 function shuffleCards() {
-    // Fisher-Yates Shuffle Algorithm
-    for (let i = currentLessonWords.length - 1; i > 0; i--) {
+    for (let i = displayList.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        [currentLessonWords[i], currentLessonWords[j]] = [currentLessonWords[j], currentLessonWords[i]];
+        [displayList[i], displayList[j]] = [displayList[j], displayList[i]];
     }
     currentIndex = 0;
     updateCard();
 }
 
-// Start the app
+// Event Listeners
+lessonSelect.addEventListener('change', (e) => loadLesson(e.target.value));
+
+// Start
 init();

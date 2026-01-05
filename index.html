@@ -9,31 +9,41 @@
 </head>
 
 <body>
-
     <div class="container">
         <header>
             <h1>🇯🇵 Nihongo Master</h1>
-            <select id="lesson-select">
-                <option value="all">All Lessons</option>
-                <!-- Options will be filled by JavaScript -->
-            </select>
+            
+            <!-- CONTROLS AREA -->
+            <div class="top-controls">
+                <select id="lesson-select">
+                    <option value="all">All Lessons</option>
+                    <!-- Options filled by JS -->
+                </select>
+
+                <div class="filter-option">
+                    <input type="checkbox" id="weak-toggle" onchange="reloadCurrentLesson()">
+                    <label for="weak-toggle">Practice Weak Words Only</label>
+                </div>
+            </div>
         </header>
 
         <div class="card-area">
             <div class="card" id="flashcard" onclick="flipCard()">
                 <div class="card-inner">
-                    <!-- Front of Card (English) -->
+                    <!-- Front of Card -->
                     <div class="card-front">
+                        <!-- Star Button (Stop Propagation prevents flip) -->
+                        <button class="star-btn" onclick="toggleWeakStatus(event)">☆</button>
+                        
                         <h2 id="word-english">Select a Lesson</h2>
                         <p class="hint">Click to Flip</p>
                     </div>
-                    <!-- Back of Card (Japanese) -->
+                    
+                    <!-- Back of Card -->
                     <div class="card-back">
                         <h2 id="word-kanji"></h2>
                         <h3 id="word-kana"></h3>
-                        <!-- Add this button below the Kana -->
-                        <button id="replay-btn" onclick="playAudio(event)"
-                            style="margin-top:15px; background:transparent; border:1px solid white;">🔊</button>
+                        <button id="replay-btn" onclick="playAudio(event)">🔊</button>
                     </div>
                 </div>
             </div>
@@ -44,11 +54,9 @@
             <span id="counter">0 / 0</span>
             <button onclick="nextCard()">Next →</button>
         </div>
-
-        <button class="shuffle-btn" onclick="shuffleCards()">🔀 Shuffle Words</button>
+        
+        <button class="shuffle-btn" onclick="shuffleCards()">🔀 Shuffle List</button>
     </div>
 
     <script src="script.js"></script>
 </body>
-
-</html>
