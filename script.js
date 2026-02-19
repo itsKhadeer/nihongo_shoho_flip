@@ -820,8 +820,165 @@ const vocabData = {
         { "kana": "ならぶ (ならびます)", "kanji": "並ぶ", "english": "To line up" },
         { "kana": "ひく (ひきます)", "kanji": "引く", "english": "To pull" }
       ]
-    }
-  ]
+    },
+    {
+      "lesson_number": 19,
+      "vocabulary": [
+        { "kana": "おもう", "kanji": "思う", "english": "To think" },
+        { "kana": "かんがえる", "kanji": "考える", "english": "To consider" },
+        { "kana": "だいがくいん", "kanji": "大学院", "english": "Graduate school" },
+        { "kana": "さかな", "kanji": "魚", "english": "Fish" },
+        { "kana": "いしゃ", "kanji": "医者", "english": "Doctor" },
+        { "kana": "しょうにん", "kanji": "商人", "english": "Trader" },
+        { "kana": "おんがくか", "kanji": "音楽家", "english": "Musician" },
+        { "kana": "しんぶん", "kanji": "新聞", "english": "News paper" },
+        { "kana": "しんぶんきしゃ", "kanji": "新聞記者", "english": "Journalist" },
+        { "kana": "がか", "kanji": "画家", "english": "Artist" },
+        { "kana": "しちょう", "kanji": "市長", "english": "Mayor" },
+        { "kana": "やくにん", "kanji": "役人", "english": "Government official" },
+        { "kana": "ぎんこういん", "kanji": "銀行員", "english": "Bank employee" },
+        { "kana": "でんきこうがく", "kanji": "電気工学", "english": "Electrical engineering" },
+        { "kana": "がくしゃ", "kanji": "学者", "english": "Scholar" },
+        { "kana": "とうきょうだいがく", "kanji": "東京大学", "english": "Tokyo university" },
+        { "kana": "つもり", "kanji": "", "english": "Thinking" },
+        { "kana": "しょうらい", "kanji": "", "english": "Future" },
+        { "kana": "がくぶ", "kanji": "", "english": "College or course" },
+        { "kana": "しゅうしかてい", "kanji": "", "english": "Post graduation" },
+        { "kana": "はくしかてい", "kanji": "", "english": "Doctrate" },
+        { "kana": "しけん", "kanji": "", "english": "Exam" },
+        { "kana": "でんぽう", "kanji": "", "english": "Telegram" },
+        { "kana": "テニス", "kanji": "", "english": "Tennis" },
+        { "kana": "おもう / おもいます", "kanji": "思う", "english": "To think" },
+        { "kana": "やく / やきます", "kanji": "", "english": "To burn" },
+        { "kana": "かんがえる / かんがえます", "kanji": "考える", "english": "To consider" },
+        { "kana": "うける / うけます", "kanji": "", "english": "To attend// take up ( an exam)" },
+        { "kana": "まける / まけます", "kanji": "", "english": "To lose" }
+      ]
+    },
+    {
+      "lesson_number": 20,
+      "vocabulary": [
+        { "kana": "つくる", "kanji": "作る", "english": "To create/ to make" },
+        { "kana": "だいどころ", "kanji": "台所", "english": "Kitchen" },
+        { "kana": "あじ", "kanji": "味", "english": "Taste" },
+        { "kana": "つかう", "kanji": "使う", "english": "To use" },
+        { "kana": "たけ", "kanji": "竹", "english": "Bamboo" },
+        { "kana": "けいと", "kanji": "毛糸", "english": "Knitting wool" },
+        { "kana": "こめ", "kanji": "米", "english": "Rice" },
+        { "kana": "ぎゅうにゅう", "kanji": "牛にゅう", "english": "Milk" },
+        { "kana": "くすり", "kanji": "薬", "english": "Medicine" },
+        { "kana": "かいすい", "kanji": "海水", "english": "Sea water" },
+        { "kana": "おと", "kanji": "音", "english": "Sound" },
+        { "kana": "こえ", "kanji": "声", "english": "Voice" },
+        { "kana": "ながい", "kanji": "長い", "english": "Long" },
+        { "kana": "あたらしい", "kanji": "新しい", "english": "New" },
+        { "kana": "ふるい", "kanji": "古い", "english": "Old" },
+        { "kana": "おおい", "kanji": "多い", "english": "Lots" },
+        { "kana": "すくない", "kanji": "少ない", "english": "Not much" },
+        { "kana": "さくぶん", "kanji": "作文", "english": "Essay / Composition" },
+        { "kana": "のむ", "kanji": "飲む", "english": "To drink" },
+        { "kana": "にく", "kanji": "", "english": "Meat" },
+        { "kana": "りょうり", "kanji": "", "english": "Dish" },
+        { "kana": "におい", "kanji": "", "english": "Fragrance" },
+        { "kana": "しょうゆ", "kanji": "", "english": "Soya sauce" },
+        { "kana": "しお", "kanji": "", "english": "Salt" },
+        { "kana": "さとう", "kanji": "", "english": "Sugar" },
+        { "kana": "だいず", "kanji": "", "english": "Soya beans" },
+        { "kana": "とうふ", "kanji": "", "english": "Bean curd" },
+        { "kana": "げんりょう", "kanji": "", "english": "Raw materials" },
+        { "kana": "みそしる", "kanji": "", "english": "Soya soup" },
+        { "kana": "こむぎこ", "kanji": "", "english": "Wheat flour" },
+        { "kana": "ふくろ", "kanji": "", "english": "Carry bag" },
+        { "kana": "かわ", "kanji": "", "english": "Leather" },
+        { "kana": "げた", "kanji": "", "english": "Wooden slipper" },
+        { "kana": "ふえ", "kanji": "", "english": "Flute" },
+        { "kana": "さけ", "kanji": "", "english": "Japanese wine" },
+        { "kana": "いちご", "kanji": "", "english": "Straw berry" },
+        { "kana": "ぶどう", "kanji": "", "english": "Grapes" },
+        { "kana": "ぶどうしゅ", "kanji": "", "english": "Grape wine" },
+        { "kana": "しゅくだい", "kanji": "", "english": "Home work" },
+        { "kana": "せっけん", "kanji": "", "english": "Soap" },
+        { "kana": "よい", "kanji": "", "english": "Good" },
+        { "kana": "おもい", "kanji": "", "english": "Heavy" },
+        { "kana": "おおい", "kanji": "多い", "english": "Many/ lots" },
+        { "kana": "すくない", "kanji": "少ない", "english": "Not much" },
+        { "kana": "すこし", "kanji": "少し", "english": "Small quantity" },
+        { "kana": "おかしい", "kanji": "", "english": "Strange" },
+        { "kana": "ジャム", "kanji": "", "english": "Jam" },
+        { "kana": "バター", "kanji": "", "english": "Butter" },
+        { "kana": "いや（な）", "kanji": "", "english": "Not good" },
+        { "kana": "ざんねん（な）", "kanji": "", "english": "Pitiful" },
+        { "kana": "とても", "kanji": "", "english": "Very" },
+        { "kana": "うっかり", "kanji": "", "english": "Careless" },
+        { "kana": "つい", "kanji": "", "english": "Unintentionally" },
+        { "kana": "つくる / つくります", "kanji": "作る", "english": "To create/ to make" },
+        { "kana": "のこる / のこります", "kanji": "", "english": "To remain" },
+        { "kana": "あむ / あみます", "kanji": "", "english": "To knit" },
+        { "kana": "しおをとる / とります", "kanji": "しおを取る", "english": "To take/ pass the ___" },
+        { "kana": "おとす / おとします", "kanji": "", "english": "To drop" },
+        { "kana": "ひろう / ひろいます", "kanji": "", "english": "To pick" },
+        { "kana": "わらう / わらいます", "kanji": "", "english": "To laugh" },
+        { "kana": "のみすぎる / のみすぎます", "kanji": "飲みすぎる", "english": "To drink excessively" },
+        { "kana": "あじをつける / つけます", "kanji": "味をつける", "english": "To add to the taste" },
+        { "kana": "おぼえる / おぼえます", "kanji": "", "english": "To remember" },
+        { "kana": "わすれる / わすれます", "kanji": "", "english": "To forget" }
+      ]
+    },
+    {
+      "lesson_number": 21,
+      "vocabulary": [
+        { "kana": "そと", "kanji": "外", "english": "Outside" },
+        { "kana": "きおん", "kanji": "気温", "english": "Temperature" },
+        { "kana": "ゆうがた", "kanji": "夕方", "english": "Evening" },
+        { "kana": "らいしゅう", "kanji": "来週", "english": "Next week" },
+        { "kana": "りょうしん", "kanji": "両親", "english": "Parents" },
+        { "kana": "べんきょう", "kanji": "勉強", "english": "Studies" },
+        { "kana": "たはた", "kanji": "田畑", "english": "Fields" },
+        { "kana": "せいかつ", "kanji": "生活", "english": "Life-style" },
+        { "kana": "しごと", "kanji": "仕事", "english": "Work" },
+        { "kana": "しなもの", "kanji": "品物", "english": "Goods / articles" },
+        { "kana": "ふね", "kanji": "船", "english": "Ship / boat" },
+        { "kana": "たいふう", "kanji": "台風", "english": "Typhoon" },
+        { "kana": "たま", "kanji": "玉", "english": "Ball / sphere" },
+        { "kana": "かじ", "kanji": "火事", "english": "Fire" },
+        { "kana": "め", "kanji": "目", "english": "Eye" },
+        { "kana": "たのしい", "kanji": "楽しい", "english": "Enjoyable" },
+        { "kana": "ただしい", "kanji": "正しい", "english": "Correct" },
+        { "kana": "ゆうめい", "kanji": "有名", "english": "Famous" },
+        { "kana": "てんきよほう", "kanji": "天気よほう", "english": "Weather fore-cast" },
+        { "kana": "きょうだい", "kanji": "兄弟", "english": "Siblings" },
+        { "kana": "こたえ", "kanji": "答え", "english": "Answer" },
+        { "kana": "はじめ", "kanji": "", "english": "Start" },
+        { "kana": "かれ", "kanji": "", "english": "He" },
+        { "kana": "かのじょ", "kanji": "", "english": "She" },
+        { "kana": "もんだい", "kanji": "", "english": "Problem" },
+        { "kana": "じしん", "kanji": "", "english": "Earth quake" },
+        { "kana": "おまつり", "kanji": "", "english": "Festival" },
+        { "kana": "こんど", "kanji": "", "english": "This time" },
+        { "kana": "はきよい", "kanji": "", "english": "Easy to wear" },
+        { "kana": "うれしい", "kanji": "", "english": "Happy" },
+        { "kana": "あぶない", "kanji": "", "english": "Dangerous" },
+        { "kana": "やさしい", "kanji": "", "english": "Easy" },
+        { "kana": "かなしい", "kanji": "", "english": "Sad" },
+        { "kana": "しんせつ（な）", "kanji": "", "english": "Kind" },
+        { "kana": "まじめ（な）", "kanji": "", "english": "Honest" },
+        { "kana": "ほがらか（な）", "kanji": "", "english": "Bright" },
+        { "kana": "ゆうめいな", "kanji": "有名（な）", "english": "Famous" },
+        { "kana": "あいかわらず", "kanji": "", "english": "As usual" },
+        { "kana": "つづく", "kanji": "", "english": "To continue" },
+        { "kana": "さがる", "kanji": "下がる", "english": "To lower" },
+        { "kana": "たがやす", "kanji": "", "english": "To cultivate" },
+        { "kana": "しごとにつく", "kanji": "仕事につく", "english": "Stick to a job" },
+        { "kana": "しずむ", "kanji": "", "english": "To sink" },
+        { "kana": "なく", "kanji": "", "english": "To cry" },
+        { "kana": "くずれる", "kanji": "", "english": "To crumble" },
+        { "kana": "あれる", "kanji": "", "english": "To be rough" },
+        { "kana": "たおれる", "kanji": "", "english": "To fall down" },
+        { "kana": "いえをたてる", "kanji": "家をたてる", "english": "To build a home" },
+        { "kana": "やめる", "kanji": "", "english": "To stop" }
+      ],
+    },
+  ],
 };
 // ... [KEEP YOUR HUGE vocabData JSON HERE] ...
 
@@ -845,174 +1002,174 @@ const weakToggle = document.getElementById('weak-toggle');
 const starBtn = document.querySelector('.star-btn');
 
 function init() {
-    vocabData.lessons.forEach(lesson => {
-        const option = document.createElement('option');
-        option.value = lesson.lesson_number;
-        option.textContent = `Lesson ${lesson.lesson_number}`;
-        lessonSelect.appendChild(option);
-    });
-    loadLesson('all');
+  vocabData.lessons.forEach(lesson => {
+    const option = document.createElement('option');
+    option.value = lesson.lesson_number;
+    option.textContent = `Lesson ${lesson.lesson_number}`;
+    lessonSelect.appendChild(option);
+  });
+  loadLesson('all');
 }
 
 // 1. GENERATE A UNIQUE ID FOR EACH WORD
 // We need this to track which specific word is "weak"
 function getWordId(word) {
-    return `${word.kana}-${word.english}`;
+  return `${word.kana}-${word.english}`;
 }
 
 // 2. LOAD LESSON (Called when changing dropdown OR toggling checkbox)
 function loadLesson(lessonNum) {
-    // A. Get the raw words from the JSON
-    if (lessonNum === 'all') {
-        currentLessonWords = vocabData.lessons.flatMap(l => l.vocabulary);
-    } else {
-        const lesson = vocabData.lessons.find(l => l.lesson_number == lessonNum);
-        currentLessonWords = lesson ? [...lesson.vocabulary] : [];
-    }
+  // A. Get the raw words from the JSON
+  if (lessonNum === 'all') {
+    currentLessonWords = vocabData.lessons.flatMap(l => l.vocabulary);
+  } else {
+    const lesson = vocabData.lessons.find(l => l.lesson_number == lessonNum);
+    currentLessonWords = lesson ? [...lesson.vocabulary] : [];
+  }
 
-    // B. Check if we need to filter for Weak Words
-    reloadCurrentLesson();
+  // B. Check if we need to filter for Weak Words
+  reloadCurrentLesson();
 }
 
 function reloadCurrentLesson() {
-    const isWeakMode = weakToggle.checked;
+  const isWeakMode = weakToggle.checked;
 
-    if (isWeakMode) {
-        // Filter: Keep only words whose ID is in the weakWordsSet
-        displayList = currentLessonWords.filter(word => weakWordsSet.has(getWordId(word)));
-    } else {
-        // No Filter: Show everything
-        displayList = [...currentLessonWords];
-    }
-    
-    currentIndex = 0;
-    updateCard();
+  if (isWeakMode) {
+    // Filter: Keep only words whose ID is in the weakWordsSet
+    displayList = currentLessonWords.filter(word => weakWordsSet.has(getWordId(word)));
+  } else {
+    // No Filter: Show everything
+    displayList = [...currentLessonWords];
+  }
+
+  currentIndex = 0;
+  updateCard();
 }
 
 // 3. UPDATE CARD DISPLAY
 function updateCard() {
-    cardElement.classList.remove('flipped');
-    
-    // Handle Empty List
-    if (displayList.length === 0) {
-        englishEl.textContent = "No words found!";
-        kanjiEl.textContent = "";
-        kanaEl.textContent = "";
-        counterEl.textContent = "0 / 0";
-        starBtn.style.display = 'none'; // Hide star if no cards
-        return;
-    }
+  cardElement.classList.remove('flipped');
 
-    starBtn.style.display = 'block';
-    const word = displayList[currentIndex];
+  // Handle Empty List
+  if (displayList.length === 0) {
+    englishEl.textContent = "No words found!";
+    kanjiEl.textContent = "";
+    kanaEl.textContent = "";
+    counterEl.textContent = "0 / 0";
+    starBtn.style.display = 'none'; // Hide star if no cards
+    return;
+  }
 
-    setTimeout(() => {
-        englishEl.textContent = word.english;
-        kanjiEl.textContent = word.kanji ? word.kanji : word.kana;
-        kanaEl.textContent = word.kanji ? word.kana : "";
-        counterEl.textContent = `${currentIndex + 1} / ${displayList.length}`;
-        
-        // Update Star Appearance
-        updateStarAppearance(word);
-    }, 200);
+  starBtn.style.display = 'block';
+  const word = displayList[currentIndex];
+
+  setTimeout(() => {
+    englishEl.textContent = word.english;
+    kanjiEl.textContent = word.kanji ? word.kanji : word.kana;
+    kanaEl.textContent = word.kanji ? word.kana : "";
+    counterEl.textContent = `${currentIndex + 1} / ${displayList.length}`;
+
+    // Update Star Appearance
+    updateStarAppearance(word);
+  }, 200);
 }
 
 // 4. WEAK WORD LOGIC
 function updateStarAppearance(word) {
-    const id = getWordId(word);
-    if (weakWordsSet.has(id)) {
-        starBtn.textContent = '★'; // Solid star
-        starBtn.classList.add('active');
-    } else {
-        starBtn.textContent = '☆'; // Hollow star
-        starBtn.classList.remove('active');
-    }
+  const id = getWordId(word);
+  if (weakWordsSet.has(id)) {
+    starBtn.textContent = '★'; // Solid star
+    starBtn.classList.add('active');
+  } else {
+    starBtn.textContent = '☆'; // Hollow star
+    starBtn.classList.remove('active');
+  }
 }
 
 function toggleWeakStatus(event) {
-    event.stopPropagation(); // Stop card from flipping
+  event.stopPropagation(); // Stop card from flipping
 
-    if (displayList.length === 0) return;
+  if (displayList.length === 0) return;
 
-    const word = displayList[currentIndex];
-    const id = getWordId(word);
+  const word = displayList[currentIndex];
+  const id = getWordId(word);
 
-    if (weakWordsSet.has(id)) {
-        weakWordsSet.delete(id); // Remove
-    } else {
-        weakWordsSet.add(id); // Add
-    }
+  if (weakWordsSet.has(id)) {
+    weakWordsSet.delete(id); // Remove
+  } else {
+    weakWordsSet.add(id); // Add
+  }
 
-    // Save to browser memory
-    localStorage.setItem('nihongoWeakWords', JSON.stringify([...weakWordsSet]));
-    
-    // Update visual star
-    updateStarAppearance(word);
+  // Save to browser memory
+  localStorage.setItem('nihongoWeakWords', JSON.stringify([...weakWordsSet]));
+
+  // Update visual star
+  updateStarAppearance(word);
 }
 
 // --- STANDARD NAVIGATION FUNCTIONS ---
 
 function flipCard() {
-    cardElement.classList.toggle('flipped');
-    if (cardElement.classList.contains('flipped')) {
-        const word = displayList[currentIndex];
-        if(!word) return;
-        
-        // Audio Logic
-        const textToSpeak = word.kana;
-        if ('speechSynthesis' in window) {
-            const utterance = new SpeechSynthesisUtterance(textToSpeak);
-            utterance.lang = 'ja-JP';
-            utterance.rate = 0.8;
-            window.speechSynthesis.cancel();
-            window.speechSynthesis.speak(utterance);
-        }
+  cardElement.classList.toggle('flipped');
+  if (cardElement.classList.contains('flipped')) {
+    const word = displayList[currentIndex];
+    if (!word) return;
+
+    // Audio Logic
+    const textToSpeak = word.kana;
+    if ('speechSynthesis' in window) {
+      const utterance = new SpeechSynthesisUtterance(textToSpeak);
+      utterance.lang = 'ja-JP';
+      utterance.rate = 0.8;
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.speak(utterance);
     }
+  }
 }
 
 function playAudio(event) {
-    event.stopPropagation();
-    const word = displayList[currentIndex];
-    if(!word) return;
-    
-    if ('speechSynthesis' in window) {
-        const utterance = new SpeechSynthesisUtterance(word.kana);
-        utterance.lang = 'ja-JP';
-        utterance.rate = 0.8;
-        window.speechSynthesis.cancel();
-        window.speechSynthesis.speak(utterance);
-    }
+  event.stopPropagation();
+  const word = displayList[currentIndex];
+  if (!word) return;
+
+  if ('speechSynthesis' in window) {
+    const utterance = new SpeechSynthesisUtterance(word.kana);
+    utterance.lang = 'ja-JP';
+    utterance.rate = 0.8;
+    window.speechSynthesis.cancel();
+    window.speechSynthesis.speak(utterance);
+  }
 }
 
 function nextCard() {
-    if (currentIndex < displayList.length - 1) {
-        currentIndex++;
-        updateCard();
-    } else {
-        // Loop back to start? Or just stop.
-        // Let's loop for smoother usage
-        currentIndex = 0;
-        updateCard();
-    }
+  if (currentIndex < displayList.length - 1) {
+    currentIndex++;
+    updateCard();
+  } else {
+    // Loop back to start? Or just stop.
+    // Let's loop for smoother usage
+    currentIndex = 0;
+    updateCard();
+  }
 }
 
 function prevCard() {
-    if (currentIndex > 0) {
-        currentIndex--;
-        updateCard();
-    } else {
-        currentIndex = displayList.length - 1;
-        updateCard();
-    }
+  if (currentIndex > 0) {
+    currentIndex--;
+    updateCard();
+  } else {
+    currentIndex = displayList.length - 1;
+    updateCard();
+  }
 }
 
 function shuffleCards() {
-    for (let i = displayList.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [displayList[i], displayList[j]] = [displayList[j], displayList[i]];
-    }
-    currentIndex = 0;
-    updateCard();
+  for (let i = displayList.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [displayList[i], displayList[j]] = [displayList[j], displayList[i]];
+  }
+  currentIndex = 0;
+  updateCard();
 }
 
 // Event Listeners
